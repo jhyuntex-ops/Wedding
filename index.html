@@ -4,6 +4,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@400;500;600&family=Jost:wght@300;400;500&family=Alex+Brush&display=swap');
 
   :root{
+    color-scheme: light;
     --bg:#f7f6f2;
     --bg-alt:#fbfaf6;
     --card:#fffefb;
@@ -15,32 +16,9 @@
     --accent-soft:#c9ac7d;
     --shadow: 0 30px 60px -30px rgba(60,50,30,0.25);
   }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#18160f;
-      --bg-alt:#201d16;
-      --card:#221f18;
-      --ink:#ece4d4;
-      --ink-soft:#b6ab96;
-      --ink-faint:#7d7566;
-      --line:#463f30;
-      --accent:#c9a869;
-      --accent-soft:#8f7448;
-      --shadow: 0 30px 60px -30px rgba(0,0,0,0.6);
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#18160f;
-    --bg-alt:#201d16;
-    --card:#221f18;
-    --ink:#ece4d4;
-    --ink-soft:#b6ab96;
-    --ink-faint:#7d7566;
-    --line:#463f30;
-    --accent:#c9a869;
-    --accent-soft:#8f7448;
-    --shadow: 0 30px 60px -30px rgba(0,0,0,0.6);
-  }
+  /* Invitation always renders in its own light, ivory palette —
+     intentionally ignoring the viewer's phone dark-mode setting,
+     so every guest sees the same design regardless of device theme. */
 
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
