@@ -1,7 +1,8 @@
 <title>Jaehyun & San</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@400;500;600&family=Jost:wght@300;400;500&family=Alex+Brush&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@400;500;600&family=Jost:wght@300;400;500&family=Alex+Brush&family=Alegreya+SC:wght@500;700&display=swap');
 
   :root{
     color-scheme: light;
@@ -29,6 +30,9 @@
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
     min-height:100vh;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+    line-break:strict;
   }
   .kr{ font-family:'Noto Serif KR', serif; }
   .vn{ font-family:'EB Garamond', serif; }
@@ -68,10 +72,10 @@
   }
   .cover-compass{ width:34px; height:auto; opacity:.85; margin-bottom:22px; animation: spin-slow 18s linear infinite; }
   @keyframes spin-slow{ to{ transform:rotate(360deg); } }
-  .cover-eyebrow{ font-size:.72rem; color:var(--ink-soft); margin-bottom:20px; }
+  .cover-eyebrow{ font-family:'EB Garamond', serif; font-size:.78rem; letter-spacing:.24em; color:var(--ink-soft); margin-bottom:20px; }
   .cover-names{ font-family:'Cormorant Garamond', serif; font-weight:400; font-size:2.55rem; letter-spacing:.06em; line-height:1.25; }
   .cover-amp{ display:block; font-family:'Alex Brush', cursive; font-size:2rem; color:var(--accent); margin:2px 0; }
-  .cover-date{ margin-top:22px; font-family:'Jost',sans-serif; letter-spacing:.22em; font-size:.82rem; color:var(--ink-soft); }
+  .cover-date{ margin-top:22px; font-family:'EB Garamond', serif; letter-spacing:.13em; font-size:.92rem; color:var(--ink-soft); font-variant-numeric:lining-nums tabular-nums; }
   .cover-tap{
     margin-top:56px;
     display:flex;
@@ -85,7 +89,7 @@
     cursor:pointer;
     color:var(--ink);
   }
-  .cover-tap span{ font-family:'Jost',sans-serif; font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; }
+  .cover-tap span{ font-family:'EB Garamond', serif; font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; }
   .cover-tap .ring{
     width:10px;height:10px;border-radius:50%;border:1px solid var(--accent);
     animation: pulse-ring 1.8s ease-out infinite;
@@ -107,8 +111,8 @@
 
   .greeting{ text-align:center; margin-top:8px; }
   .greeting .vn-line{ font-size:.86rem; letter-spacing:.05em; color:var(--ink); margin:2px 0; }
-  .greeting .vn-line.small{ color:var(--ink-soft); font-size:.8rem; }
-  .greeting .kr-line{ font-size:.98rem; color:var(--ink-soft); line-height:1.9; margin-top:14px; }
+  .greeting .vn-line.small{ font-size:.8rem; }
+  .greeting .kr-line{ font-size:.86rem; color:var(--ink-soft); line-height:1.9; margin-top:14px; }
 
   .divider{ display:flex; align-items:center; justify-content:center; gap:14px; margin:34px 0; }
   .divider .bar{ height:1px; width:64px; background:var(--line); }
@@ -122,9 +126,9 @@
   .names.in-view .and{ opacity:1; }
 
   .date-block{ text-align:center; }
-  .date-block .date{ font-family:'Cormorant Garamond', serif; font-size:2.3rem; letter-spacing:.09em; font-variant-numeric:tabular-nums; }
-  .date-block .dow{ font-family:'Jost', sans-serif; font-size:.78rem; letter-spacing:.28em; color:var(--accent); vertical-align:.5em; margin-left:.35em; }
-  .date-block .time{ font-family:'Jost', sans-serif; font-size:.95rem; letter-spacing:.2em; color:var(--ink-soft); margin-top:6px; }
+  .date-block .date{ font-family:'EB Garamond', serif; font-weight:500; font-size:2.15rem; letter-spacing:.06em; font-variant-numeric:lining-nums tabular-nums; }
+  .date-block .dow{ font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:500; font-size:1.05rem; letter-spacing:.05em; color:var(--accent); vertical-align:.42em; margin-left:.4em; }
+  .date-block .time{ font-family:'EB Garamond', serif; font-size:1.4rem; letter-spacing:.14em; color:var(--ink-soft); margin-top:8px; }
   .dday{
     display:inline-flex; align-items:center; gap:8px; margin-top:18px;
     padding:7px 18px; border:1px solid var(--line); border-radius:999px;
@@ -133,24 +137,24 @@
   .dday b{ color:var(--accent); font-size:.86rem; font-variant-numeric:tabular-nums; }
 
   .venue{ text-align:center; }
-  .venue .venue-name{ font-family:'Jost',sans-serif; font-weight:500; font-size:.92rem; letter-spacing:.11em; }
+  .venue .venue-name{ font-family:'Alegreya SC', serif; font-weight:700; font-size:1rem; letter-spacing:.07em; }
   .venue .venue-vn{ font-size:.86rem; color:var(--ink-soft); margin-top:8px; }
 
   .parents{ display:flex; align-items:stretch; justify-content:center; text-align:center; gap:0; }
   .parents .side{ flex:1; padding:0 14px; }
   .parents .rule{ width:1px; background:var(--line); margin:4px 0; }
   .parents .role{ font-size:.86rem; letter-spacing:.03em; }
-  .parents .role-vn{ font-family:'Jost',sans-serif; font-size:.66rem; letter-spacing:.16em; color:var(--ink-soft); text-transform:uppercase; margin-top:4px; }
+  .parents .role-vn{ font-family:'Alegreya SC', serif; font-weight:500; font-size:.8rem; letter-spacing:.05em; color:var(--ink-soft); margin-top:4px; }
   .parents .tick{ width:4px;height:4px;background:var(--accent-soft);transform:rotate(45deg);margin:12px auto; }
   .parents .pname{ font-family:'Cormorant Garamond', serif; font-size:1.18rem; letter-spacing:.02em; margin:2px 0; }
 
   .thanks{ text-align:center; }
-  .thanks .kr-line{ font-size:.96rem; color:var(--ink); line-height:1.9; }
+  .thanks .kr-line{ font-size:.84rem; color:var(--ink); line-height:1.9; }
   .thanks .vn-line{ font-size:.82rem; color:var(--ink-soft); letter-spacing:.03em; margin-top:6px; }
 
   .info-head{ text-align:center; }
-  .info-head .label{ font-size:.78rem; color:var(--ink); }
-  .info-head .kr{ font-size:.86rem; color:var(--ink-soft); margin-top:6px; }
+  .info-head .label{ font-size:.86rem; color:var(--ink); }
+  .info-head .kr{ font-size:.9rem; color:var(--ink-soft); margin-top:6px; }
 
   .timeline{ position:relative; margin-top:34px; }
   .tl-row{ display:flex; justify-content:space-between; position:relative; }
@@ -161,12 +165,12 @@
   .timeline.in-view .tl-item:nth-child(3){ transition-delay:.31s; }
   .timeline.in-view .tl-item:nth-child(4){ transition-delay:.44s; }
   .tl-item img{ width:44px; height:44px; object-fit:contain; }
-  .tl-item .tl-vn{ font-size:.66rem; letter-spacing:.02em; color:var(--ink); }
-  .tl-item .tl-kr{ font-family:'Noto Serif KR',serif; font-size:.72rem; color:var(--ink-soft); }
+  .tl-item .tl-vn{ font-size:.76rem; letter-spacing:.02em; color:var(--ink); }
+  .tl-item .tl-kr{ font-family:'Noto Serif KR',serif; font-size:.8rem; color:var(--ink-soft); }
   .tl-line{ height:1px; margin:14px 0 6px; background-image:linear-gradient(to right, var(--line) 55%, rgba(0,0,0,0) 0%); background-position:bottom; background-size:6px 1px; background-repeat:repeat-x; position:relative; overflow:hidden; }
   .tl-line::after{ content:''; position:absolute; inset:0; background:var(--bg); transform:scaleX(1); transform-origin:right; transition:transform 1s cubic-bezier(.4,0,.2,1) .2s; }
   .timeline.in-view .tl-line::after{ transform:scaleX(0); }
-  .tl-times{ display:flex; justify-content:space-between; font-family:'Jost',sans-serif; font-size:.64rem; letter-spacing:.03em; color:var(--ink-soft); }
+  .tl-times{ display:flex; justify-content:space-between; font-family:'Jost',sans-serif; font-size:.72rem; letter-spacing:.03em; color:var(--ink-soft); }
   .tl-times span{ flex:1; text-align:center; font-variant-numeric:tabular-nums; }
   .tl-times span.up{ transform:translateY(-2px); }
   .tl-times span.down{ transform:translateY(2px); }
@@ -180,8 +184,8 @@
   .link-row:active{ transform:scale(.98); }
   .link-row:hover{ border-color:var(--accent-soft); }
   .link-row .lt{ display:flex; flex-direction:column; gap:3px; }
-  .link-row .lt .vn{ font-size:.82rem; }
-  .link-row .lt .kr{ font-family:'Noto Serif KR',serif; font-size:.72rem; color:var(--ink-soft); }
+  .link-row .lt .vn{ font-size:.88rem; }
+  .link-row .lt .kr{ font-family:'Noto Serif KR',serif; font-size:.78rem; color:var(--ink-soft); }
   .link-row .arrow{ font-family:'Jost',sans-serif; color:var(--accent); font-size:1rem; }
 
   .map-wrap{ margin-top:30px; border-radius:16px; overflow:hidden; border:1px solid var(--line); position:relative; display:block; }
@@ -206,11 +210,45 @@
   .map-label img{ width:100%; display:block; }
   .map-cap{
     background:var(--card); padding:12px 18px; text-align:center; border-top:1px solid var(--line);
-    font-family:'Jost',sans-serif; font-size:.72rem; letter-spacing:.06em; color:var(--ink-soft);
+    font-family:'Jost',sans-serif; font-size:.78rem; letter-spacing:.06em; color:var(--ink-soft);
   }
   .map-cap b{ color:var(--ink); font-weight:500; }
 
-  .notice{ margin-top:30px; text-align:center; font-size:.74rem; line-height:1.85; color:var(--ink-faint); }
+  .notice{ margin-top:30px; text-align:center; font-size:.8rem; line-height:1.85; color:var(--ink-faint); }
+
+  .gift{ margin-top:30px; }
+  .gift-toggle{
+    width:100%; display:flex; align-items:center; justify-content:center; gap:10px;
+    background:none; border:1px solid var(--line); border-radius:14px;
+    padding:14px 18px; cursor:pointer; color:var(--ink);
+  }
+  .gift-toggle .gtl{ display:flex; flex-direction:column; gap:3px; align-items:center; }
+  .gift-toggle .vn{ font-size:.82rem; }
+  .gift-toggle .kr{ font-family:'Noto Serif KR',serif; font-size:.78rem; color:var(--ink-soft); }
+  .gift-toggle .chev{ font-family:'Jost',sans-serif; color:var(--accent); font-size:.85rem; transition:transform .3s ease; }
+  .gift-toggle.open .chev{ transform:rotate(180deg); }
+  .gift-panel{
+    max-height:0; overflow:hidden;
+    transition:max-height .5s cubic-bezier(.2,.7,.2,1), opacity .4s ease, margin-top .4s ease;
+    opacity:0; margin-top:0;
+  }
+  .gift-panel.open{ max-height:900px; opacity:1; margin-top:14px; }
+  .gift-side{
+    border:1px solid var(--line); border-radius:14px; background:var(--card);
+    padding:16px 18px; text-align:center;
+  }
+  .gift-side + .gift-side{ margin-top:12px; }
+  .gift-side .g-role{ font-size:.8rem; color:var(--ink); }
+  .gift-side .g-role-vn{ font-family:'Alegreya SC', serif; font-size:.76rem; color:var(--ink-soft); margin-top:2px; }
+  .gift-side .g-bank{ font-family:'Jost',sans-serif; font-size:.7rem; letter-spacing:.08em; color:var(--accent); text-transform:uppercase; margin-top:10px; }
+  .gift-side .g-num{ font-family:'EB Garamond', serif; font-size:1.2rem; letter-spacing:.07em; font-variant-numeric:lining-nums tabular-nums; margin-top:4px; }
+  .gift-side .g-name{ font-size:.78rem; color:var(--ink-soft); margin-top:4px; }
+  .gift-side .g-copy{
+    margin-top:10px; font-family:'Jost',sans-serif; font-size:.64rem; letter-spacing:.1em; text-transform:uppercase;
+    background:none; border:1px solid var(--line); border-radius:999px; padding:6px 16px; color:var(--ink-soft); cursor:pointer;
+  }
+  .gift-side .g-copy.copied{ color:var(--accent); border-color:var(--accent-soft); }
+  .gift-warn{ margin-top:16px; font-size:.68rem; line-height:1.75; color:var(--ink-faint); text-align:center; }
 
   .closing{ text-align:center; margin-top:10px; }
   .closing-row{ display:flex; align-items:center; justify-content:center; gap:16px; }
@@ -395,8 +433,40 @@
   </section>
 
   <section class="notice reveal">
-    Vui lòng làm theo hướng dẫn của nhân viên khi đến địa điểm tổ chức lễ cưới.<br>
-    <span class="kr">주차는 예식장 도착 시 직원의 안내에 따라주세요.</span>
+    Nếu quý khách đi xe riêng, vui lòng liên hệ bảo vệ trung tâm để được hướng dẫn đến khu vực gửi xe miễn phí.<br>
+    <span class="kr">자차로 오시는 하객분들께서는 센터 경비원에게 문의해 주시면 무료 주차 장소를 안내해 드리겠습니다.</span>
+  </section>
+
+  <section class="gift reveal">
+    <button class="gift-toggle" id="giftToggle" type="button" aria-expanded="false">
+      <span class="gtl">
+        <span class="vn">Gửi lời chúc phúc</span>
+        <span class="kr">마음 전하실 곳</span>
+      </span>
+      <span class="chev">&#9662;</span>
+    </button>
+    <div class="gift-panel" id="giftPanel">
+      <div class="gift-side">
+        <div class="g-role kr">신랑측 · Nhà trai</div>
+        <div class="g-role-vn">JAEHYUN</div>
+        <div class="g-bank">Hana Bank</div>
+        <div class="g-num">28791029771607</div>
+        <div class="g-name">소재현</div>
+        <button class="g-copy" data-copy="28791029771607" type="button">복사 · Sao chép</button>
+      </div>
+      <div class="gift-side">
+        <div class="g-role kr">신부측 · Nhà gái</div>
+        <div class="g-role-vn">SAN</div>
+        <div class="g-bank">Techcombank</div>
+        <div class="g-num">19036786943014</div>
+        <div class="g-name">Đinh Thị Sang</div>
+        <button class="g-copy" data-copy="19036786943014" type="button">복사 · Sao chép</button>
+      </div>
+      <div class="gift-warn">
+        계좌 변경 등 안내는 본 청첩장 외 카카오톡·문자로 별도 드리지 않습니다. 확인되지 않은 메시지는 유의해 주세요.<br>
+        <span class="vn">Chúng tôi không thông báo thay đổi số tài khoản qua bất kỳ tin nhắn nào khác ngoài thiệp mời này.</span>
+      </div>
+    </div>
   </section>
 
   <section class="closing reveal">
@@ -493,6 +563,50 @@
     var loc = encodeURIComponent('Forevermark Wedding & Convention, West Lake, Ha Noi');
     var dates = '20260926T040000Z/20260926T053000Z';
     cal.href = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+text+'&dates='+dates+'&details='+details+'&location='+loc;
+  }
+
+  // Gift account accordion
+  var giftToggle = document.getElementById('giftToggle');
+  var giftPanel = document.getElementById('giftPanel');
+  if(giftToggle && giftPanel){
+    giftToggle.addEventListener('click', function(){
+      var isOpen = giftPanel.classList.toggle('open');
+      giftToggle.classList.toggle('open', isOpen);
+      giftToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  // Copy account number
+  document.querySelectorAll('.g-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var num = btn.getAttribute('data-copy');
+      var done = function(){
+        var orig = btn.textContent;
+        btn.textContent = '복사됨 · Đã sao chép';
+        btn.classList.add('copied');
+        setTimeout(function(){
+          btn.textContent = orig;
+          btn.classList.remove('copied');
+        }, 1600);
+      };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(num).then(done, function(){
+          fallbackCopy(num); done();
+        });
+      } else {
+        fallbackCopy(num); done();
+      }
+    });
+  });
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    try{ document.execCommand('copy'); }catch(e){}
+    document.body.removeChild(ta);
   }
 })();
 </script>
